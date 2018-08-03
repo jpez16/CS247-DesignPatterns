@@ -17,7 +17,7 @@ class Miata {
     };
     virtual std::string color() = 0;
 };
-    
+
 // In this example subclasses cannot change the fact that miatas are mazda's and created by tom montano, but they can however change the paint colour of the car!
 
 int main(int argc, const char * argv[]) {
