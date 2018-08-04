@@ -16,12 +16,23 @@ class Miata {
         return "Tom Montano";
     };
     virtual std::string color() = 0;
+public:
+    void printColor() {
+        std::cout << "The color of the miata is " << this->color() << std::endl;
+    }
+};
+
+class BlueMiata : public Miata {
+public:
+    std::string color() override {
+        return "blue";
+    }
 };
 
 // In this example subclasses cannot change the fact that miatas are mazda's and created by tom montano, but they can however change the paint colour of the car!
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    BlueMiata* justinCar = new BlueMiata();
+    justinCar->printColor();
     return 0;
 }
